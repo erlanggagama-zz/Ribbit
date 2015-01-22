@@ -15,5 +15,13 @@
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="email_hint">Email</string>
     <string name="sign_up_button_label">Sign Up</string>
+    <string name="error_message_title">Oops!</string>
+    <string name="error_message">Please make sure that username, password, and email are not empty!</string>
+    <string name="error_login_message">Please make sure that username and password are not empty!</string>
+    <string name="menu_logout_label">Logout</string>
+    <string name="forgot_password_text">forgot password?</string>
+    <string name="forgot_password_dialog_box_title">Enter your email here</string>
+    <string name="reset_password_button">Reset Password</string>
+    <string name="successfully_reset_password">Check your email and follow the link</string>
 
 </resources>
