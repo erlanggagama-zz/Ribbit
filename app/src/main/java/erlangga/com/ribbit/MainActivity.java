@@ -2,7 +2,10 @@ package erlangga.com.ribbit;
 
 import java.util.Locale;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.preference.DialogPreference;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -36,6 +39,25 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
+
+    protected DialogInterface.OnClickListener mDialogListener =
+            new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    switch (which) {
+                        case 0: //take picture
+                            break;
+                        case 1: //take video
+                            break;
+                        case 2: // Choose Picture
+                            break;
+                        case 3: // Choose Video
+                            break;
+                    }
+                }
+            };
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,10 +132,19 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_logout) {
-            ParseUser.logOut();
-            navigateToLogin();
-            return true;
+        switch (id) {
+            case R.id.action_logout:
+                ParseUser.logOut();
+                navigateToLogin();
+                return true;
+            case R.id.action_edit_friends:
+                Intent intent = new Intent(this, EditFriendsActivity.class);
+                startActivity(intent);
+            case R.id.action_camera:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setItems(R.array.camera_choices, mDialogListener);
+                AlertDialog dialog = builder.create();
+                dialog.show();
         }
 
         return super.onOptionsItemSelected(item);

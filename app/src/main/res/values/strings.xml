@@ -24,5 +24,14 @@
     <string name="successfully_reset_password">Check your email and follow the link</string>
     <string name="empty_inbox_message">There is no new message</string>
     <string name="empty_friends_message">There is no friend added</string>
+    <string name="menu_editfriends_label">Edit Friends</string>
+    <string name="title_activity_edit_friends">EditFriendsActivity</string>
+    <string name="menu_camera_label">Camera</string>
+    <string-array name="camera_choices">
+        <item>Take Picture</item>
+        <item>Take Video</item>
+        <item>Choose Picture</item>
+        <item>Choose Video</item>
+    </string-array>
 
 </resources>

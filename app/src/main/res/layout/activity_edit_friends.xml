@@ -2,12 +2,7 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context=".MainActivity$PlaceholderFragment">
-
-    <TextView
-        android:id="@+id/section_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+                tools:context="erlangga.com.ribbit.EditFriendsActivity">
 
     <ListView
         android:layout_width="match_parent"
@@ -17,10 +12,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
-    <TextView
-        android:layout_width="match_parent"
+    <ProgressBar
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@android:id/empty"
-        android:text="@string/empty_inbox_message"/>
-
+        android:id="@+id/editFriendsProgressBar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

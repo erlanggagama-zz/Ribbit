@@ -3,8 +3,21 @@
       xmlns:tools="http://schemas.android.com/tools"
       tools:context=".MainActivity">
 
+
+    <item android:id="@+id/action_camera"
+          android:title="@string/menu_camera_label"
+          android:icon="@drawable/device_access_camera"
+          app:showAsAction="always"  />
+
+    <item android:id="@+id/action_edit_friends"
+          android:title="@string/menu_editfriends_label"
+        />
+
     <item android:id="@+id/action_logout"
           android:title="@string/menu_logout_label"
-          />
+        />
+
+
+
 
 </menu>
